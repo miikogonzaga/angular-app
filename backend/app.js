@@ -3,10 +3,10 @@ const bodyParser = require("body-parser");
 const mongoose = require('mongoose');
 
 const Post = require('./models/post');
-
+const Key = require('./keys')
 const app = express();
 
-mongoose.connect("mongodb+srv://admin:8zNZXyNRuAPHvs3y@cluster0.zjvoj.mongodb.net/ng-app?retryWrites=true&w=majority")
+mongoose.connect(Key)
     .then(() => {
         console.log('Connected to database')
     })
